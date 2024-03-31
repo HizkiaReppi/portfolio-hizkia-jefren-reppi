@@ -1,7 +1,7 @@
 // Navbar
-let header = document.querySelector('header');
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const header = document.querySelector('header');
+const menu = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   header.classList.toggle('shadow', window.scrollY > 0);
 });
@@ -10,10 +10,11 @@ menu.onclick = () => {
 }
 window.onscroll = () => {
   navbar.classList.remove('active');
-} 
+}
+
 // Dark Mode
-let darkmode = document.querySelector('#darkmode');
-let logo = document.querySelector('.logo-img')
+const darkmode = document.querySelector('#darkmode');
+const logo = document.querySelector('.logo-img')
 darkmode.addEventListener('click', () => {
   if(darkmode.classList.contains('bx-moon')){
     darkmode.classList.replace('bx-moon','bx-sun');
@@ -25,3 +26,6 @@ darkmode.addEventListener('click', () => {
     logo.src = './image/logo-lightmode.svg'
   }
 })
+
+// Footer
+document.getElementById('year').innerText = new Date().getFullYear();

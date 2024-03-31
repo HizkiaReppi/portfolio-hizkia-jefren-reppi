@@ -27,6 +27,7 @@ body.active {
   --bg-color: #0f0c27;
 }
 body {
+  scroll-behavior: smooth;
   background: var(--bg-color);
   color: var(--text-color);
 }
@@ -82,6 +83,7 @@ header.shadow {
 }
 .navbar a:hover {
   color: var(--hover);
+  transition: 0.3s;
 }
 #menu-icon {
   font-size: 24px;
@@ -135,6 +137,7 @@ header.shadow {
 }
 .social a:hover {
   color: var(--hover);
+  transition: 0.3s;
 }
 .btn {
   display: inline-block;
@@ -145,6 +148,7 @@ header.shadow {
 }
 .btn:hover {
   background: var(--hover);
+  transition: 0.3s;
 }
 .about-container {
   display: grid;
@@ -172,69 +176,62 @@ header.shadow {
 .information .info-box .bx {
   font-size: 22px;
 }
-.information .info-box span {
+.information .info-box a {
   font-weight: 400;
   margin-left: 1rem;
+  color: inherit;
+}
+.information .info-box a:hover {
+  color: var(--main-color);
+  transition: 0.3s;
 }
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1.5rem 3rem;
   margin-top: 4rem;
 }
-.skills-img img {
-  width: 80%;
-  padding-left: 4rem;
-  object-position: center;
-}
-.bars-box {
+.skill-card {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
+  width: 225px;
+  height: 150px;
+  padding: 10px;
+  background: hsla(260, 100%, 44%, 0.1);
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.bars-box h3,
-span {
-  font-size: 1.1rem;
-  font-weight: 500;
+.skill-icon {
+  font-size: 75px;
 }
-.light-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.5rem;
-  background: hsla(260, 100%, 44%, 0.4);
-  border-radius: 0.5rem;
+.html {
+  color: #f16529;
 }
-.percent-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 0.5rem;
-  background: var(--main-color);
-  border-radius: 0.5rem;
+.css {
+  color: #2965f1;
 }
-.html-bar, .msword-bar{
-  width: 80%;
+.js {
+  color: #f0db4f;
 }
-.css-bar, .msppt-bar {
-  width: 70%;
+.react {
+  color: #61dbfb;
 }
-.js-bar {
-  width: 50%;
+.node {
+  color: #68a063;
 }
-.react-bar {
-  width: 10%;
+.tailwind {
+  color: #06b6d4;
 }
-.php-bar {
-  width: 30%;
+.bootstrap {
+  color: #7952b3;
 }
-.msexcel-bar {
-  width: 60%;
+.php {
+  color: #8993be;
 }
 .contact-form {
   display: grid;
@@ -269,7 +266,7 @@ form textarea {
   width: 160px;
   height: 40px;
   cursor: pointer;
-  background: #2768d9;
+  background: var(--main-color);
   color: #fff;
   justify-content: center;
   text-transform: uppercase;
@@ -281,15 +278,16 @@ form textarea {
 }
 .contact-button:hover {
   background: var(--hover);
+  transition: 0.3s;
 }
 .copyright {
   padding: 20px;
-  background: var(--main-color);
+  border-top: 1px solid var(--text-color);
   text-align: center;
-  color: #fff;
+  color: var(--text-color);
 }
 .copyright a{
-  color: #22cf91;
+  color: var(--main-color);
 }
 /* Responsive */
 @media (max-width: 991px) {
@@ -364,16 +362,9 @@ form textarea {
     justify-content: center;
   }
   .skills-container {
-    grid-template-columns: 1fr;
-  }
-  .skills-img img {
-    padding-left: 0;
-  }
-  .skills-img {
-    padding-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
+  gap: 1rem .5rem;
+  margin-top: 2rem;
+}
   .contact-form form{
     width: 300px;
   }
