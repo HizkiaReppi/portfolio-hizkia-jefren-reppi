@@ -133,11 +133,11 @@
       <span>Hubungi Saya</span>
     </div>
     <div class="contact-form">
-      <form>
-        <input type="text" name="name" id="name" placeholder="Nama Anda">
-        <input type="email" name="email" id="email" placeholder="Email Anda">
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Pesan Kamu.."></textarea>
-        <button type="submit" name="submit" class="contact-button">Kirim</button>
+      <form id="contact-form" method="POST">
+        <input type="text" name="name" id="name" placeholder="Nama Anda" required>
+        <input type="email" name="email" id="email" placeholder="Email Anda" required>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Pesan Kamu.." required></textarea>
+        <button type="submit" id="submit" class="contact-button">Kirim</button>
       </form>
     </div>
   </section>
@@ -149,6 +149,7 @@
     </p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>

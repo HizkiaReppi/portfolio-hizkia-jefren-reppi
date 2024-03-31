@@ -29,3 +29,15 @@ darkmode.addEventListener('click', () => {
 
 // Footer
 document.getElementById('year').innerText = new Date().getFullYear();
+
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  Swal.fire({
+    title: 'Kirim Pesan Berhasil',
+    text: 'Pesan Anda Telah Saya Terima, Terimakasih Telah Menghubungi Saya',
+    icon: 'success'
+  });
+});
