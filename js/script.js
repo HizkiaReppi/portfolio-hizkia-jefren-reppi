@@ -41,3 +41,22 @@ form.addEventListener('submit', (e) => {
     icon: 'success'
   });
 });
+
+
+// Scroll Up
+const scrollUp = document.querySelector('#scroll-up');
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 100){
+    scrollUp.style.display = 'flex';
+  } else {
+    scrollUp.style.display = 'none';
+  }
+});
+
+scrollUp.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

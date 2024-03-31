@@ -289,6 +289,25 @@ form textarea {
 .copyright a{
   color: var(--main-color);
 }
+#scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--main-color);
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+#scroll-up:hover {
+  background: var(--hover);
+  transition: 0.3s;
+}
 /* Responsive */
 @media (max-width: 991px) {
   header {
@@ -362,9 +381,9 @@ form textarea {
     justify-content: center;
   }
   .skills-container {
-  gap: 1rem .5rem;
-  margin-top: 2rem;
-}
+    gap: 1rem .5rem;
+    margin-top: 2rem;
+  }
   .contact-form form{
     width: 300px;
   }
